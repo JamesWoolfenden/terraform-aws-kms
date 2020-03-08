@@ -2,7 +2,7 @@ common_tags = {
 "createdby" = "Terraform" }
 
 accounts = ["111111111111", "222222222222", "680235478471"]
-kms = {
+key = {
   description              = "AMI-Sharing"
   deletion_window_in_days  = 30
   key_usage                = "ENCRYPT_DECRYPT"

@@ -3,5 +3,5 @@ output "secure" {
 }
 
 output "alias" {
-  value = aws_kms_key.secure
+  value = aws_kms_alias.key
 }
