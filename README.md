@@ -42,7 +42,7 @@ If you want to share to other AWS accounts add values to a list called **account
 |------|-------------|------|---------|:-----:|
 | accounts | n/a | `list` | `[]` | no |
 | common\_tags | This is to help you add tags to your cloud objects | `map` | n/a | yes |
-| key | n/a | `map` | <pre>{<br>  "customer_master_key_spec": "SYMMETRIC_DEFAULT",<br>  "deletion_window_in_days": 10,<br>  "description": "KMS key 1",<br>  "enable_key_rotation": false,<br>  "is_enabled": true,<br>  "key_usage": "ENCRYPT_DECRYPT"<br>}<br></pre> | no |
+| key | n/a | `map` | <pre>{<br>  "customer_master_key_spec": "SYMMETRIC_DEFAULT",<br>  "deletion_window_in_days": 10,<br>  "description": "KMS key 1",<br>  "enable_key_rotation": true,<br>  "is_enabled": true,<br>  "key_usage": "ENCRYPT_DECRYPT"<br>}<br></pre> | no |
 
 ## Outputs
 
