@@ -19,3 +19,9 @@ variable "accounts" {
   type        = list
   default     = []
 }
+
+variable "alias" {
+  type        = string
+  description = "KMS alias"
+  default     = "alias/ami-sharing"
+}
