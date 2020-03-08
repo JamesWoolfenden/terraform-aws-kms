@@ -5,6 +5,6 @@ resource "aws_kms_key" "secure" {
   customer_master_key_spec = var.key["customer_master_key_spec"]
   policy                   = data.aws_iam_policy_document.kms.json
   is_enabled               = var.key["is_enabled"]
-  enable_key_rotation      = var.key["enable_key_rotation"]
+  enable_key_rotation      = true
   tags                     = var.common_tags
 }

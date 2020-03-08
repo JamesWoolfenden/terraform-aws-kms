@@ -4,18 +4,18 @@ variable "common_tags" {
 }
 
 variable "key" {
-  description = ""
+  description = "Details of the key"
   default = {
     description              = "KMS key 1"
     deletion_window_in_days  = 10
     key_usage                = "ENCRYPT_DECRYPT"
     customer_master_key_spec = "SYMMETRIC_DEFAULT"
     is_enabled               = true
-    enable_key_rotation      = true
   }
 }
 
 variable "accounts" {
-  type    = list
-  default = []
+  description = "A list of accounts that can use the key"
+  type        = list
+  default     = []
 }
