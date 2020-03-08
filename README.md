@@ -21,10 +21,13 @@ Include this repository as a module in your existing Terraform code:
 module "efs" {
   source      = "JamesWoolfenden/kms/aws"
   version     = "0.0.1"
+  key         = var.key
   common_tags = var.common_tags
   accounts    = var.accounts
 }
 ```
+
+If you want to share to other AWS accounts add values to a list called **accounts** to the module reference with the account ids, and set your own values to the map key.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Providers
