@@ -23,9 +23,11 @@ module "efs" {
   version     = "0.0.1"
   key         = var.key
   common_tags = var.common_tags
-  accounts    = var.accounts
+  user_policy = var.user_policy
 }
 ```
+
+The example in the **examplea** folder shows how to pass your own policy in when creating your key.
 
 If you want to share to other AWS accounts add values to a list called **accounts** to the module reference with the account ids, and set your own values to the map key.
 

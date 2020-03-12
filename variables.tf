@@ -14,14 +14,14 @@ variable "key" {
   }
 }
 
-variable "accounts" {
-  description = "A list of accounts that can use the key"
-  type        = list
-  default     = []
-}
-
 variable "alias" {
   type        = string
   description = "KMS alias"
   default     = "alias/ami-sharing"
+}
+
+variable "user_policy" {
+  type=string
+  description="Allow Key policies to be user supplied"
+  default=""
 }

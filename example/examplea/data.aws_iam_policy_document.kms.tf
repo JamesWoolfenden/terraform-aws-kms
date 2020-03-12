@@ -35,6 +35,7 @@ data "aws_iam_policy_document" "kms" {
     ]
     resources = ["*"]
   }
+  
   statement {
     sid = "Allow use of the ami key"
     actions = [
