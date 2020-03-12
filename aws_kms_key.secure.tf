@@ -8,4 +8,3 @@ resource "aws_kms_key" "secure" {
   enable_key_rotation      = true
   tags                     = var.common_tags
 }
-

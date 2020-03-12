@@ -4,8 +4,8 @@ variable "common_tags" {
 }
 
 variable "key" {
-  type=map
-  description="The values for the key"
+  type        = map
+  description = "The values for the key"
 }
 
 variable "accounts" {
@@ -13,6 +13,6 @@ variable "accounts" {
 }
 
 variable "alias" {
-  type=string
-  description="Alias for the key"
+  type        = string
+  description = "Alias for the key"
 }

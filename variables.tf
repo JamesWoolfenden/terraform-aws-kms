@@ -21,7 +21,7 @@ variable "alias" {
 }
 
 variable "user_policy" {
-  type=string
-  description="Allow Key policies to be user supplied"
-  default=""
+  type        = string
+  description = "Allow Key policies to be user supplied"
+  default     = ""
 }

@@ -10,4 +10,4 @@ key = {
   is_enabled               = true
 }
 
-alias="alias/my-kms-key"
+alias = "alias/my-kms-key"
