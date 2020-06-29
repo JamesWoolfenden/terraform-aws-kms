@@ -32,28 +32,7 @@ The example in the **examplea** folder shows how to pass your own policy in when
 If you want to share to other AWS accounts add values to a list called **accounts** to the module reference with the account ids, and set your own values to the map key.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-## Providers
-
-| Name | Version |
-|------|---------|
-| aws | n/a |
-
-## Inputs
-
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:-----:|
-| alias | KMS alias | `string` | `"alias/ami-sharing"` | no |
-| common\_tags | This is to help you add tags to your cloud objects | `map` | n/a | yes |
-| key | Details of the key | `map` | <pre>{<br>  "customer_master_key_spec": "SYMMETRIC_DEFAULT",<br>  "deletion_window_in_days": 10,<br>  "description": "KMS key 1",<br>  "is_enabled": true,<br>  "key_usage": "ENCRYPT_DECRYPT"<br>}<br></pre> | no |
-| user\_policy | Allow Key policies to be user supplied | `string` | `""` | no |
-
-## Outputs
-
-| Name | Description |
-|------|-------------|
-| alias | n/a |
-| secure | n/a |
-
+Error: no lines in file
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Related Projects
@@ -110,8 +89,8 @@ under the License.
 [logo]: https://gist.githubusercontent.com/JamesWoolfenden/5c457434351e9fe732ca22b78fdd7d5e/raw/15933294ae2b00f5dba6557d2be88f4b4da21201/slalom-logo.png
 [website]: https://slalom.com
 [github]: https://github.com/jameswoolfenden
-[linkedin]: https://www.linkedin.com/company/slalom-consulting/
-[twitter]: https://twitter.com/Slalom
+[linkedin]: https://www.linkedin.com/in/jameswoolfenden/
+[twitter]: https://twitter.com/JimWoolfenden
 
 [share_twitter]: https://twitter.com/intent/tweet/?text=terraform-aws-kms&url=https://github.com/JamesWoolfenden/terraform-aws-kms
 [share_linkedin]: https://www.linkedin.com/shareArticle?mini=true&title=terraform-aws-kms&url=https://github.com/JamesWoolfenden/terraform-aws-kms
