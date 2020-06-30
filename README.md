@@ -32,7 +32,32 @@ The example in the **examplea** folder shows how to pass your own policy in when
 If you want to share to other AWS accounts add values to a list called **accounts** to the module reference with the account ids, and set your own values to the map key.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-Error: no lines in file
+## Requirements
+
+No requirements.
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| aws | n/a |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| alias | KMS alias | `string` | `"alias/ami-sharing"` | no |
+| common\_tags | This is to help you add tags to your cloud objects | `map` | n/a | yes |
+| key | Details of the key | `map` | <pre>{<br>  "customer_master_key_spec": "SYMMETRIC_DEFAULT",<br>  "deletion_window_in_days": 10,<br>  "description": "KMS key 1",<br>  "is_enabled": true,<br>  "key_usage": "ENCRYPT_DECRYPT"<br>}</pre> | no |
+| user\_policy | Allow Key policies to be user supplied | `string` | `""` | no |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| alias | n/a |
+| secure | n/a |
+
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Related Projects
