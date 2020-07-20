@@ -20,10 +20,11 @@ Include this repository as a module in your existing Terraform code:
 ```hcl
 module "efs" {
   source      = "JamesWoolfenden/kms/aws"
-  version     = "0.0.1"
-  key         = var.key
+  version     = "0.0.9"
   common_tags = var.common_tags
-  user_policy = var.user_policy
+  key         = var.key
+  user_policy = data.aws_iam_policy_document.kms.json
+  alias       = var.alias
 }
 ```
 
