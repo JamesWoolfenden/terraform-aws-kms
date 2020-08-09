@@ -5,7 +5,7 @@
 [![Build Status](https://github.com/JamesWoolfenden/terraform-aws-kms/workflows/Verify%20and%20Bump/badge.svg?branch=master)](https://github.com/JamesWoolfenden/terraform-aws-kms)
 [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-kms.svg)](https://github.com/JamesWoolfenden/terraform-aws-kms/releases/latest)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
-[![pre-commit](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
+[![checkov](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
 
 Terraform module - Create and optionally shares kms key to other accounts.
 
@@ -20,7 +20,7 @@ Include this repository as a module in your existing Terraform code:
 ```hcl
 module "efs" {
   source      = "JamesWoolfenden/kms/aws"
-  version     = "0.0.9"
+  version     = "v0.0.11"
   common_tags = var.common_tags
   key         = var.key
   user_policy = data.aws_iam_policy_document.kms.json
