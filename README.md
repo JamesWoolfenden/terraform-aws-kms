@@ -13,6 +13,8 @@ Terraform module - Create and optionally shares kms key to other accounts.
 
 It's 100% Open Source and licensed under the [APACHE2](LICENSE).
 
+![alt text](./diagram/kms.png)
+
 ## Usage
 
 Include this repository as a module in your existing Terraform code:
