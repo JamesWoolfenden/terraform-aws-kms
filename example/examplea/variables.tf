@@ -1,15 +1,15 @@
 variable "common_tags" {
   description = "This is to help you add tags to your cloud objects"
-  type        = map
+  type        = map(any)
 }
 
 variable "key" {
-  type        = map
+  type        = map(any)
   description = "The values for the key"
 }
 
 variable "accounts" {
-  type = list
+  type = list(any)
 }
 
 variable "alias" {
