@@ -1,6 +1,7 @@
 data "aws_iam_policy_document" "kms" {
-  #checkov:skip=CKV_AWS_111:resource based
-  #checkov:skip=CKV_AWS_109:resource based
+  # checkov:skip=CKV_AWS_111:resource based
+  # checkov:skip=CKV_AWS_109:resource based
+  # tfsec:ignore:AWS097: Its key attached
   statement {
     sid    = "Enable IAM User Permissions"
     effect = "Allow"
@@ -9,7 +10,7 @@ data "aws_iam_policy_document" "kms" {
       identifiers = ["arn:aws:iam::${data.aws_caller_identity.current.account_id}:root"]
     }
     actions   = ["kms:*"]
-    resources = [module.kms.secure.arn]
+    resources = ["*"]
   }
 
   statement {
@@ -35,7 +36,7 @@ data "aws_iam_policy_document" "kms" {
       "kms:ScheduleKeyDeletion",
       "kms:CancelKeyDeletion"
     ]
-    resources = [module.kms.secure.arn]
+    resources = ["*"]
   }
 
   statement {
@@ -57,7 +58,7 @@ data "aws_iam_policy_document" "kms" {
       ]
     }
 
-    resources = [module.kms.secure.arn]
+    resources = ["*"]
 
   }
 }
