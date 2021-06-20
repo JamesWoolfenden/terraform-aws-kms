@@ -9,7 +9,7 @@ data "aws_iam_policy_document" "kms" {
       identifiers = ["arn:aws:iam::${data.aws_caller_identity.current.account_id}:root"]
     }
     actions   = ["kms:*"]
-    resources = ["*"]
+    resources = [module.kms.secure.arn]
   }
 
   statement {
@@ -35,7 +35,7 @@ data "aws_iam_policy_document" "kms" {
       "kms:ScheduleKeyDeletion",
       "kms:CancelKeyDeletion"
     ]
-    resources = ["*"]
+    resources = [module.kms.secure.arn]
   }
 
   statement {
@@ -57,8 +57,7 @@ data "aws_iam_policy_document" "kms" {
       ]
     }
 
-    resources = [
-    "*"]
+    resources = [module.kms.secure.arn]
 
   }
 }
