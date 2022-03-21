@@ -5,7 +5,7 @@ variable "common_tags" {
 
 variable "key" {
   description = "Details of the key"
-  type=object({
+  type = object({
     description              = string
     deletion_window_in_days  = number
     key_usage                = string
@@ -32,6 +32,6 @@ variable "user_policy" {
 }
 
 variable "is_enabled" {
-  type=bool
-  default=true
+  type    = bool
+  default = true
 }

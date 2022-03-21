@@ -66,7 +66,8 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_alias"></a> [alias](#input\_alias) | KMS alias | `string` | `"alias/ami-sharing"` | no |
 | <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | This is to help you add tags to your cloud objects | `map(any)` | n/a | yes |
-| <a name="input_key"></a> [key](#input\_key) | Details of the key | `map` | <pre>{<br>  "customer_master_key_spec": "SYMMETRIC_DEFAULT",<br>  "deletion_window_in_days": 10,<br>  "description": "KMS key 1",<br>  "is_enabled": true,<br>  "key_usage": "ENCRYPT_DECRYPT"<br>}</pre> | no |
+| <a name="input_is_enabled"></a> [is\_enabled](#input\_is\_enabled) | n/a | `bool` | `true` | no |
+| <a name="input_key"></a> [key](#input\_key) | Details of the key | <pre>object({<br>    description              = string<br>    deletion_window_in_days  = number<br>    key_usage                = string<br>    customer_master_key_spec = string<br>  })</pre> | <pre>{<br>  "customer_master_key_spec": "SYMMETRIC_DEFAULT",<br>  "deletion_window_in_days": 10,<br>  "description": "KMS key 1",<br>  "key_usage": "ENCRYPT_DECRYPT"<br>}</pre> | no |
 | <a name="input_user_policy"></a> [user\_policy](#input\_user\_policy) | Allow Key policies to be user supplied | `string` | `""` | no |
 
 ## Outputs
