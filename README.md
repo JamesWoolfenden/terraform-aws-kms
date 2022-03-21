@@ -39,16 +39,15 @@ The example in the **examplea** folder shows how to pass your own policy in when
 If you want to share to other AWS accounts add values to a list called **accounts** to the module reference with the account ids, and set your own values to the map key.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-
 ## Requirements
 
 No requirements.
 
 ## Providers
 
-| Name                                             | Version |
-| ------------------------------------------------ | ------- |
-| <a name="provider_aws"></a> [aws](#provider_aws) | n/a     |
+| Name | Version |
+|------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
 
 ## Modules
 
@@ -56,27 +55,26 @@ No modules.
 
 ## Resources
 
-| Name                                                                                                       | Type     |
-| ---------------------------------------------------------------------------------------------------------- | -------- |
+| Name | Type |
+|------|------|
 | [aws_kms_alias.key](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_alias) | resource |
-| [aws_kms_key.secure](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_key)  | resource |
+| [aws_kms_key.secure](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_key) | resource |
 
 ## Inputs
 
-| Name                                                               | Description                                        | Type       | Default                                                                                                                                                                                              | Required |
-| ------------------------------------------------------------------ | -------------------------------------------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------: |
-| <a name="input_alias"></a> [alias](#input_alias)                   | KMS alias                                          | `string`   | `"alias/ami-sharing"`                                                                                                                                                                                |    no    |
-| <a name="input_common_tags"></a> [common_tags](#input_common_tags) | This is to help you add tags to your cloud objects | `map(any)` | n/a                                                                                                                                                                                                  |   yes    |
-| <a name="input_key"></a> [key](#input_key)                         | Details of the key                                 | `map`      | <pre>{<br> "customer_master_key_spec": "SYMMETRIC_DEFAULT",<br> "deletion_window_in_days": 10,<br> "description": "KMS key 1",<br> "is_enabled": true,<br> "key_usage": "ENCRYPT_DECRYPT"<br>}</pre> |    no    |
-| <a name="input_user_policy"></a> [user_policy](#input_user_policy) | Allow Key policies to be user supplied             | `string`   | `""`                                                                                                                                                                                                 |    no    |
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_alias"></a> [alias](#input\_alias) | KMS alias | `string` | `"alias/ami-sharing"` | no |
+| <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | This is to help you add tags to your cloud objects | `map(any)` | n/a | yes |
+| <a name="input_key"></a> [key](#input\_key) | Details of the key | `map` | <pre>{<br>  "customer_master_key_spec": "SYMMETRIC_DEFAULT",<br>  "deletion_window_in_days": 10,<br>  "description": "KMS key 1",<br>  "is_enabled": true,<br>  "key_usage": "ENCRYPT_DECRYPT"<br>}</pre> | no |
+| <a name="input_user_policy"></a> [user\_policy](#input\_user\_policy) | Allow Key policies to be user supplied | `string` | `""` | no |
 
 ## Outputs
 
-| Name                                                  | Description |
-| ----------------------------------------------------- | ----------- |
-| <a name="output_alias"></a> [alias](#output_alias)    | n/a         |
-| <a name="output_secure"></a> [secure](#output_secure) | n/a         |
-
+| Name | Description |
+|------|-------------|
+| <a name="output_alias"></a> [alias](#output\_alias) | n/a |
+| <a name="output_secure"></a> [secure](#output\_secure) | n/a |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Related Projects
