@@ -1,4 +1,5 @@
 resource "aws_kms_key" "secure" {
+  # checkov:skip=CKV2_AWS_64: For example only, key policy managed via IAM
   description              = var.key["description"]
   deletion_window_in_days  = var.key["deletion_window_in_days"]
   key_usage                = var.key["key_usage"]
