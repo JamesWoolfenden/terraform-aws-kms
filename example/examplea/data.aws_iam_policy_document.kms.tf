@@ -1,7 +1,8 @@
 data "aws_iam_policy_document" "kms" {
   # checkov:skip=CKV_AWS_111:resource based
   # checkov:skip=CKV_AWS_109:resource based
-  # tfsec:ignore:AWS097: Its key attached
+  # checkov:skip=CKV_AWS_356:example
+
   statement {
     sid    = "Enable IAM User Permissions"
     effect = "Allow"

@@ -112,9 +112,13 @@ resource "aws_iam_policy" "terraform_pike" {
                 "kms:PutKeyPolicy",
                 "kms:ScheduleKeyDeletion",
                 "kms:TagResource",
-                "kms:UntagResource"
+                "kms:UntagResource",
+                "kms:UpdateAlias",
+                "kms:UpdateKeyDescription"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 })

@@ -2,7 +2,6 @@ variable "common_tags" {
   description = "This is to help you add tags to your cloud objects"
   type        = map(any)
 }
-
 variable "key" {
   description = "Details of the key"
   type = object({
@@ -18,19 +17,16 @@ variable "key" {
     customer_master_key_spec = "SYMMETRIC_DEFAULT"
   }
 }
-
 variable "alias" {
   type        = string
   description = "KMS alias"
   default     = "alias/ami-sharing"
 }
-
 variable "user_policy" {
   type        = string
   description = "Allow Key policies to be user supplied"
   default     = ""
 }
-
 variable "is_enabled" {
   type    = bool
   default = true
