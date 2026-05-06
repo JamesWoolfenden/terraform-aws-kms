@@ -1,13 +1,11 @@
 # terraform-aws-kms
 
-[![Build Status](https://github.com/JamesWoolfenden/terraform-aws-kms/workflows/Verify%20and%20Bump/badge.svg?branch=master)](https://github.com/JamesWoolfenden/terraform-aws-kms)
+[![Build Status](https://github.com/JamesWoolfenden/terraform-aws-kms/workflows/Verify/badge.svg?branch=main)](https://github.com/JamesWoolfenden/terraform-aws-kms)
 [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-kms.svg)](https://github.com/JamesWoolfenden/terraform-aws-kms/releases/latest)
 [![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/JamesWoolfenden/terraform-aws-kms.svg?label=latest)](https://github.com/JamesWoolfenden/terraform-aws-kms/releases/latest)
 ![Terraform Version](https://img.shields.io/badge/tf-%3E%3D0.14.0-blue.svg)
-[![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/JamesWoolfenden/terraform-aws-kms/cis_aws)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=JamesWoolfenden%2Fterraform-aws-kms&benchmark=CIS+AWS+V1.2)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![checkov](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
-[![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/jameswoolfenden/terraform-aws-kms/general)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=JamesWoolfenden%2Fterraform-aws-kms&benchmark=INFRASTRUCTURE+SECURITY)
 
 ---
 
@@ -46,8 +44,8 @@ No requirements.
 ## Providers
 
 | Name | Version |
-|------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
+| ---- | ------- |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 6.43.0 |
 
 ## Modules
 
@@ -56,24 +54,24 @@ No modules.
 ## Resources
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [aws_kms_alias.key](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_alias) | resource |
 | [aws_kms_key.secure](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_key) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_alias"></a> [alias](#input\_alias) | KMS alias | `string` | `"alias/ami-sharing"` | no |
 | <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | This is to help you add tags to your cloud objects | `map(any)` | n/a | yes |
 | <a name="input_is_enabled"></a> [is\_enabled](#input\_is\_enabled) | n/a | `bool` | `true` | no |
-| <a name="input_key"></a> [key](#input\_key) | Details of the key | <pre>object({<br>    description              = string<br>    deletion_window_in_days  = number<br>    key_usage                = string<br>    customer_master_key_spec = string<br>  })</pre> | <pre>{<br>  "customer_master_key_spec": "SYMMETRIC_DEFAULT",<br>  "deletion_window_in_days": 10,<br>  "description": "KMS key 1",<br>  "key_usage": "ENCRYPT_DECRYPT"<br>}</pre> | no |
+| <a name="input_key"></a> [key](#input\_key) | Details of the key | <pre>object({<br/>    description              = string<br/>    deletion_window_in_days  = number<br/>    key_usage                = string<br/>    customer_master_key_spec = string<br/>  })</pre> | <pre>{<br/>  "customer_master_key_spec": "SYMMETRIC_DEFAULT",<br/>  "deletion_window_in_days": 10,<br/>  "description": "KMS key 1",<br/>  "key_usage": "ENCRYPT_DECRYPT"<br/>}</pre> | no |
 | <a name="input_user_policy"></a> [user\_policy](#input\_user\_policy) | Allow Key policies to be user supplied | `string` | `""` | no |
 
 ## Outputs
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | <a name="output_alias"></a> [alias](#output\_alias) | n/a |
 | <a name="output_secure"></a> [secure](#output\_secure) | n/a |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
